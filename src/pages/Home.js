@@ -9,16 +9,19 @@ const Home = () => {
   console.log(user);
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch("http://localhost:4000/api/workouts", {
-        headers: {'Authorization': `Bearer ${user.token}`},
-      });
+      const response = await fetch(
+        "https://workout-backend-nine.vercel.app/api/workouts",
+        {
+          headers: { Authorization: `Bearer ${user.token}` },
+        }
+      );
       const json = await response.json();
       if (response.ok) {
         dispatch({ type: "SET_WORKOUTS", payload: json });
       }
     };
     if (user) {
-      console.log(user.token)
+      console.log(user.token);
       fetchWorkouts();
     }
   }, [dispatch, user]);

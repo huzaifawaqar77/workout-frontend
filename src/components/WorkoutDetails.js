@@ -6,11 +6,11 @@ const WorkoutDetails = ({ workout }) => {
 
   const handleSubmit = async () => {
     const response = await fetch(
-      "http://localhost:4000/api/workouts/" + workout._id,
+      "https://workout-backend-nine.vercel.app/api/workouts/" + workout._id,
       {
         method: "DELETE",
         headers: {
-          "Authorization": `Bearer ${user.token}`,
+          Authorization: `Bearer ${user.token}`,
         },
       }
     );

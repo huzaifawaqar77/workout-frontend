@@ -8,13 +8,16 @@ export const UseSignup = () => {
   const signup = async (email, password) => {
     setError(null);
     setLoading(true);
-    const response = await fetch("http://localhost:4000/api/user/signup", {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://workout-backend-nine.vercel.app/api/user/signup",
+      {
+        method: "POST",
+        body: JSON.stringify({ email, password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const json = await response.json();
     if (!response.ok) {
       setLoading(false);
