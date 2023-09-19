@@ -6,7 +6,7 @@ const WorkoutDetails = ({ workout }) => {
 
   const handleSubmit = async () => {
     const response = await fetch(
-      "https://workout-backend-nine.vercel.app/api/workouts/" + workout._id,
+      "https://workout-backend-1j7e.onrender.com/api/workouts/" + workout._id,
       {
         method: "DELETE",
         headers: {

@@ -18,7 +18,7 @@ const WorkoutForm = () => {
       return;
     }
     const response = await fetch(
-      "https://workout-backend-nine.vercel.app/api/workouts",
+      "https://workout-backend-1j7e.onrender.com/api/workouts",
       {
         method: "POST",
         body: JSON.stringify(workout),

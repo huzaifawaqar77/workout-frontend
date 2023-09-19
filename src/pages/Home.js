@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       const response = await fetch(
-        "https://workout-backend-nine.vercel.app/api/workouts",
+        "https://workout-backend-1j7e.onrender.com/api/workouts",
         {
           headers: { Authorization: `Bearer ${user.token}` },
         }
